@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var categories: [String] = []
+    let gensres = Category.categories
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -22,11 +22,20 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .clear
+        
         setGradientBackground()
         setTableViewGradientBackground()
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(hex: "#BDDDE4")
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     // MARK: - Functions
+    
+    
     // MARK: - Actions
 }
 
@@ -34,14 +43,26 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableView DataSource & Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        categories.count
+        gensres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! CategoryTableViewCell
+        cell.updateUI(categoryName: gensres[indexPath.row])
+       
+        let selectedView = UIView()
+        selectedView.backgroundColor = .white
+        cell.selectedBackgroundView = selectedView
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailCategory", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
 }
 
 extension MainViewController {

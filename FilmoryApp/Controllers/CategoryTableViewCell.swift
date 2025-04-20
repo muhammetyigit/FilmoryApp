@@ -8,12 +8,18 @@
 import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var cellLabel: UILabel!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
         backgroundColor = .clear
-        selectionStyle = .none
         textLabel?.textColor = .label
+    }
+    
+    func updateUI(categoryName: String) {
+        cellLabel.text = categoryName
     }
     
 }
