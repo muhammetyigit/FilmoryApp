@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  FilmoryApp
 //
 //  Created by Muhammet Yiğit on 20.04.2025.
@@ -8,12 +8,67 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    // MARK: - UI Elements
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    var categories: [String] = []
+    
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.backgroundColor = .clear
+        setGradientBackground()
+        setTableViewGradientBackground()
     }
-
-
+    
+    // MARK: - Functions
+    // MARK: - Actions
 }
 
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - UITableView DataSource & Delegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath)
+        cell.textLabel?.text = categories[indexPath.row]
+        return cell
+    }
+}
+
+extension MainViewController {
+    
+    // MARK: - UI Setup: Background
+    func setGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(hex: "#BDDDE4").cgColor,
+            UIColor(hex: "#9FB3DF").cgColor
+        ]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func setTableViewGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(hex: "#BDDDE4").cgColor,
+            UIColor(hex: "#9FB3DF").cgColor
+        ]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = tableView.bounds
+        
+        let backgroundView = UIView(frame: tableView.bounds)
+        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+        tableView.backgroundView = backgroundView
+    }
+}
