@@ -1,48 +1,47 @@
-# TodoApp
-PhoriesApp is an iOS application that allows users to take photos using the device camera, automatically captures their location, and displays the photos in a gallery layout using UICollectionView. All photos and their associated location data are persistently stored using Core Data. The name Phories comes from combining photos and memories.
-— because every photo tells a story.
+# Filmory
+Filmory is an iOS application that allows users to save the movies they have watched, categorize them, and give ratings. The app provides a clean interface for listing movies using both UITableView and UICollectionView. It also uses the Singleton design pattern for managing movie data consistently across the app.
 
 ## ✅ Features
-- Take photos using the device camera  
-- Automatically capture user's current location  
-- Display photos in a grid layout using `UICollectionView`  
-- Tap on a photo to view it in full size with location information  
-- Store and retrieve all data using **Core Data**
+- Add movies you've watched  
+- Categorize movies (e.g. Action, Drama, Comedy)  
+- Rate movies and view ratings later  
+- Display movies in a scrollable list using UITableView  
+- View categorized movies in a grid format using UICollectionView  
+- Navigate easily between views  
+- Store data locally using custom data structures and Singleton pattern  
 
-### 🛠 App Highlights
-- 🏁 Launch Screen: Custom launch screen design and app icon  
-- 📍 Location Support: Captures city and district using `CoreLocation`  
-- 💾 Persistent Storage: Stores photos and locations with `Core Data`  
-- 🖼 Custom UI: Custom `UICollectionViewCell` showing photo thumbnails  
-- 🧹 Delete Functionality: Users can delete photos within edit mode
+## 🛠 App Highlights
+📸 Movie Entry: Users can add movie name, category, rating, and watch date  
+📁 Folder Structure: Modular and organized folder structure (App, Models, Controllers, Views, Resources)  
+🧠 Singleton Pattern: Centralized movie management using a MovieManager singleton  
+📃 Data Structuring: Custom NewMovie struct used for storing and transferring movie data  
+🧭 Smooth Navigation: Built with UINavigationController for seamless navigation  
+🖼 Listing Interface: Movies are displayed using UITableView and UICollectionView depending on view  
 
-### 📱 Technologies Used
+
+## 📱 Technologies Used
 - Swift  
 - UIKit  
-- Core Data  
-- Core Location  
+- UITableView  
 - UICollectionView  
-- UIImagePickerController  
 - Auto Layout  
+- Singleton Pattern  
+- Custom Models & Structs
 
 ## Installation
 To get started with the project, follow these steps:
 - Clone the repository to your local machine:
   ```bash
-  git clone https://github.com/muhammetyigit/PhoriesApp.git
-  open PhoriesApp.xcodeproj
+  git clone https://github.com/muhammetyigit/Filmory.git
+  open Filmory.xcodeproj
 <p align="center">
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/gif1.gif?raw=true" alt="PhoriesApp GIF 1" width="500"/>
+  <img src="https://github.com/muhammetyigit/Filmory/blob/main/gif1.gif?raw=true" alt="Filmory GIF 1" width="500"/>
   <br><br>
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/gif2.gif?raw=true" alt="PhoriesApp GIF 2" width="500"/>
+  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss1.png?raw=true" alt="Filmory Screenshot 1" width="500"/>
     <br><br>
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/ss1.png?raw=true" alt="PhoriesApp Screenshot 1" width="500"/>
-    <br><br>
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/ss2.png?raw=true" alt="PhoriesApp Screenshot 2" width="500"/>
+  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss2.png?raw=true" alt="Filmory Screenshot 2" width="500"/>
    <br><br>
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/ss3.png?raw=true" alt="PhoriesApp Screenshot 3" width="500"/>
-   <br><br>
-  <img src="https://github.com/muhammetyigit/PhoriesApp/blob/main/ss4.png?raw=true" alt="PhoriesApp Screenshot 4" width="500"/>
+  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss3.png?raw=true" alt="Filmory Screenshot 3" width="500"/>
 </p>
 
 ## License
