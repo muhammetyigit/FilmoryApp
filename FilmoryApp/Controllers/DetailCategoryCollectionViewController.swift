@@ -9,11 +9,12 @@ import UIKit
 
 class DetailCategoryCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var selectedCategory: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let movieManager = MovieManager.shared
+        _ = MovieManager.shared
         collectionView.backgroundColor = .clear
         
         setGradientBackground()
@@ -23,12 +24,13 @@ class DetailCategoryCollectionViewController: UICollectionViewController, UIColl
     
     // MARK: UICollectionView DataSource & Delegate
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return MovieManager.shared.movies.count
+        return MovieManager.shared.getMovies(for: selectedCategory).count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryDetail", for: indexPath) as! DetailCategoryCollectionViewCell
-        let movie = MovieManager.shared.movies[indexPath.row]
+        let filteredMovies = MovieManager.shared.getMovies(for: selectedCategory)
+        let movie = filteredMovies[indexPath.row]
         cell.updateUI(movieImage: movie.movieImage!, movieName: movie.movieName, movieRate: movie.movieRate)
         return cell
     }

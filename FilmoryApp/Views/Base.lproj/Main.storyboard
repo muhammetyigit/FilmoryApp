@@ -265,6 +265,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWS-GG-bhm">
+                                                    <rect key="frame" x="156.5" y="4" width="217.5" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="847-n0-3aS">
+                                                    <rect key="frame" x="20" y="11" width="131.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mWS-GG-bhm" secondAttribute="trailing" constant="40" id="5qN-6E-W85"/>
+                                                <constraint firstItem="mWS-GG-bhm" firstAttribute="leading" secondItem="847-n0-3aS" secondAttribute="trailing" constant="5" id="NTA-jU-EYv"/>
+                                                <constraint firstAttribute="bottom" secondItem="847-n0-3aS" secondAttribute="bottom" constant="10.5" id="NhG-dx-J0T"/>
+                                                <constraint firstItem="847-n0-3aS" firstAttribute="leading" secondItem="7XZ-Y9-j4J" secondAttribute="leading" constant="20" symbolic="YES" id="PSD-CY-SGC"/>
+                                                <constraint firstItem="mWS-GG-bhm" firstAttribute="top" secondItem="7XZ-Y9-j4J" secondAttribute="top" constant="4" id="QNk-dX-cNG"/>
+                                                <constraint firstItem="847-n0-3aS" firstAttribute="top" secondItem="7XZ-Y9-j4J" secondAttribute="top" constant="11" id="e2X-se-EZd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yaT-Uq-yR6">
+                                        <rect key="frame" x="0.0" y="324.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yaT-Uq-yR6" id="S6G-FC-jsM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgy-Rt-Gow">
                                                     <rect key="frame" x="153" y="4.5" width="108.5" height="35"/>
                                                     <state key="normal" title="Button"/>
@@ -276,8 +305,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerX" secondItem="7XZ-Y9-j4J" secondAttribute="centerX" id="ZcX-EG-t8f"/>
-                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerY" secondItem="7XZ-Y9-j4J" secondAttribute="centerY" id="gyo-zP-rcg"/>
+                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerX" secondItem="S6G-FC-jsM" secondAttribute="centerX" id="0zM-ha-lya"/>
+                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerY" secondItem="S6G-FC-jsM" secondAttribute="centerY" id="94w-fw-FKb"/>
+                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerY" secondItem="S6G-FC-jsM" secondAttribute="centerY" id="qC1-K2-4Xw"/>
+                                                <constraint firstItem="Pgy-Rt-Gow" firstAttribute="centerX" secondItem="S6G-FC-jsM" secondAttribute="centerX" id="ycT-ca-KQQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -290,6 +321,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="movieCategoryTextField" destination="mWS-GG-bhm" id="Lsb-38-fzT"/>
                         <outlet property="movieImage" destination="TJ4-fh-zdW" id="B4q-C6-jK5"/>
                         <outlet property="movieNameTextField" destination="swU-I0-NXg" id="gyJ-2M-JsI"/>
                         <outlet property="movieRateTextField" destination="9F6-yI-Ngw" id="nUj-br-ODv"/>

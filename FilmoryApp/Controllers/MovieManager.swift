@@ -18,8 +18,12 @@ class MovieManager {
     func addMovie(_ movie: NewMovie) {
         movies.append(movie)
     }
-
-    func getMovies() -> [NewMovie] {
+    
+    func getAllMovies() -> [NewMovie] {
         return movies
+    }
+    
+    func getMovies(for category: String) -> [NewMovie] {
+        return movies.filter { $0.category == category }
     }
 }

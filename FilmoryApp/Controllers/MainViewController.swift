@@ -32,11 +32,6 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
-    
-    // MARK: - Functions
-    
-    
-    // MARK: - Actions
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
@@ -49,7 +44,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! CategoryTableViewCell
         cell.updateUI(categoryName: gensres[indexPath.row])
-       
+        
         let selectedView = UIView()
         selectedView.backgroundColor = .white
         cell.selectedBackgroundView = selectedView
@@ -62,7 +57,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailCategoryCollectionViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        let selected = gensres[indexPath.row].lowercased()
+        destinationVC.selectedCategory = selected
+    }
 }
 
 extension MainViewController {

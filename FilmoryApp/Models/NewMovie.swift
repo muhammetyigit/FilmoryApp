@@ -12,4 +12,5 @@ struct NewMovie {
     var movieImage: UIImage?
     var movieName: String
     var movieRate: String
+    var category: String
 }

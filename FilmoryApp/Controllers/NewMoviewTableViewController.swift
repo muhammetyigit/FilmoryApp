@@ -12,6 +12,7 @@ class NewMoviewTableViewController: UITableViewController, UIImagePickerControll
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieNameTextField: UITextField!
     @IBOutlet weak var movieRateTextField: UITextField!
+    @IBOutlet weak var movieCategoryTextField: UITextField!
     
     var newMovie: NewMovie?
     
@@ -24,15 +25,15 @@ class NewMoviewTableViewController: UITableViewController, UIImagePickerControll
     }
     
     
-    func newMovie(image: UIImage, name: String, rate: String) -> NewMovie {
-        let newMovie = NewMovie(movieImage: image, movieName: name, movieRate: rate)
+    func newMovie(image: UIImage, name: String, rate: String, category: String) -> NewMovie {
+        let newMovie = NewMovie(movieImage: image, movieName: name, movieRate: rate, category: category)
         return newMovie
     }
     
     
     @IBAction func newMovieButtonPressed(_ sender: Any) {
-        if let image = movieImage.image, let name = movieNameTextField.text, let rate = movieRateTextField.text {
-            newMovie = newMovie(image: image, name: name, rate: rate)
+        if let image = movieImage.image, let name = movieNameTextField.text, let rate = movieRateTextField.text, let category = movieCategoryTextField.text?.lowercased() {
+            newMovie = newMovie(image: image, name: name, rate: rate, category: category)
         }
     }
     
