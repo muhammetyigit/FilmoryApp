@@ -1,8 +1,6 @@
 # FilmoryApp
 Filmory is an iOS application that allows users to save the movies they have watched, categorize them, and give ratings.  
-The app provides a clean interface for listing movies using both UITableView and UICollectionView.  
-It also uses the Singleton design pattern for managing movie data consistently across the app.
-The name "Filmory" is a blend of the words **film** and **memory**, representing a personal archive of the movies you've watched and remembered.
+The app provides a clean interface for listing movies using both UITableView and UICollectionView. It also uses the Singleton design pattern for managing movie data consistently across the app. The name "Filmory" is a blend of the words **film** and **memory**, representing a personal archive of the movies you've watched and remembered.
 
 ## ✅ Features
 - Add movies you've watched  
@@ -44,9 +42,9 @@ To get started with the project, follow these steps:
   <br><br>
   <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss1.png?raw=true" alt="Filmory Screenshot 1" width="500"/>
     <br><br>
-  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss2.png?raw=true" alt="Filmory Screenshot 2" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss3.png?raw=true" alt="Filmory Screenshot 2" width="500"/>
    <br><br>
-  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss3.png?raw=true" alt="Filmory Screenshot 3" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss2.png?raw=true" alt="Filmory Screenshot 3" width="500"/>
 </p>
 
 ## License
