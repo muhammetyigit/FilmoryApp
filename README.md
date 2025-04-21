@@ -35,7 +35,7 @@ To get started with the project, follow these steps:
   git clone https://github.com/muhammetyigit/Filmory.git
   open Filmory.xcodeproj
 <p align="center">
-  <img src="https://github.com/muhammetyigit/Filmory/blob/main/gif1.gif?raw=true" alt="Filmory GIF 1" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/gif1.gif?raw=true" alt="Filmory GIF 1" width="500"/>
   <br><br>
   <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss1.png?raw=true" alt="Filmory Screenshot 1" width="500"/>
     <br><br>
