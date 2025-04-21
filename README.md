@@ -34,14 +34,16 @@ To get started with the project, follow these steps:
   ```bash
   git clone https://github.com/muhammetyigit/Filmory.git
   open Filmory.xcodeproj
+
+## 📸 Screenshots
 <p align="center">
   <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/gif1.gif?raw=true" alt="Filmory GIF 1" width="500"/>
   <br><br>
-  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss1.png?raw=true" alt="Filmory Screenshot 1" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss1.png?raw=true" alt="Filmory Screenshot 1" width="500"/>
     <br><br>
-  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss2.png?raw=true" alt="Filmory Screenshot 2" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss2.png?raw=true" alt="Filmory Screenshot 2" width="500"/>
    <br><br>
-  <img src="https://github.com/muhammetyigit/Filmory/blob/main/ss3.png?raw=true" alt="Filmory Screenshot 3" width="500"/>
+  <img src="https://github.com/muhammetyigit/FilmoryApp/blob/main/ss3.png?raw=true" alt="Filmory Screenshot 3" width="500"/>
 </p>
 
 ## License
