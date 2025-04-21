@@ -5,7 +5,7 @@ Filmory is an iOS application that allows users to save the movies they have wat
 - Add movies you've watched  
 - Categorize movies (e.g. Action, Drama, Comedy)  
 - Rate movies and view ratings later  
-- Display movies in a scrollable list using UITableView  
+- Display categories in a scrollable list using UITableView.
 - View categorized movies in a grid format using UICollectionView  
 - Navigate easily between views  
 - Store data locally using custom data structures and Singleton pattern  
