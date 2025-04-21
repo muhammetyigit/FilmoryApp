@@ -18,7 +18,6 @@ Filmory is an iOS application that allows users to save the movies they have wat
 🧭 Smooth Navigation: Built with UINavigationController for seamless navigation  
 🖼 Listing Interface: Movies are displayed using UITableView and UICollectionView depending on view  
 
-
 ## 📱 Technologies Used
 - Swift  
 - UIKit  
@@ -32,8 +31,8 @@ Filmory is an iOS application that allows users to save the movies they have wat
 To get started with the project, follow these steps:
 - Clone the repository to your local machine:
   ```bash
-  git clone https://github.com/muhammetyigit/Filmory.git
-  open Filmory.xcodeproj
+  git clone https://github.com/muhammetyigit/FilmoryApp.git
+  open FilmoryApp.xcodeproj
 
 ## 📸 Screenshots
 <p align="center">
