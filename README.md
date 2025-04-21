@@ -1,6 +1,5 @@
 # FilmoryApp
-Filmory is an iOS application that allows users to save the movies they have watched, categorize them, and give ratings.  
-The app provides a clean interface for listing movies using both UITableView and UICollectionView. It also uses the Singleton design pattern for managing movie data consistently across the app. The name "Filmory" is a blend of the words **film** and **memory**, representing a personal archive of the movies you've watched and remembered.
+Filmory is an iOS application that allows users to save the movies they have watched, categorize them, and give ratings. The app provides a clean interface for listing movies using both UITableView and UICollectionView. It also uses the Singleton design pattern for managing movie data consistently across the app. The name "Filmory" is a blend of the words **film** and **memory**, representing a personal archive of the movies you've watched and remembered.
 
 ## ✅ Features
 - Add movies you've watched  
